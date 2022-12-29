@@ -95,7 +95,7 @@ body {
 
 /* make images easier to work with */
 img,
-picutre {
+picture {
   max-width: 100%;
   display: block;
 }
@@ -401,6 +401,10 @@ body {
   background-image: url(Space-tourism-website/assets/destination/background-destination-mobile.jpg);
 }
 
+.crew {
+  background-image: url(Space-tourism-website/assets/crew/background-crew-mobile.jpg);
+}
+
 /* ----------------------------- */
 /* Layout                        */
 /* ----------------------------- */
@@ -585,6 +589,10 @@ body {
     background-image: url(Space-tourism-website/assets/destination/background-destination-tablet.jpg);
   }
 
+  .crew {
+    background-image: url(Space-tourism-website/assets/crew/background-crew-tablet.jpg);
+  }
+
   .primary-navigation {
     /*     padding-inline: 2.7rem; */
     padding-inline: clamp(3rem, 5vw, 5rem);
@@ -620,23 +628,11 @@ body {
       "content"
       "tabs"
       "image";
+    padding-bottom: 0;
   }
 
   .grid-container--crew .numbered-title {
     margin-top: 3rem;
-  }
-
-  .grid-container--crew > .douglas-img {
-    border: 0;
-    margin-bottom: -2rem;
-  }
-
-  .grid-container--crew > .douglas-img > img {
-    max-width: 75%;
-  }
-
-  .grid-container--crew {
-    padding-block: 0;
   }
 }
 
@@ -647,6 +643,10 @@ body {
 
   .destination {
     background-image: url(Space-tourism-website/assets/destination/background-destination-desktop.jpg);
+  }
+
+  .crew {
+    background-image: url(Space-tourism-website/assets/crew/background-crew-desktop.jpg);
   }
 
   .primary-header::after {
@@ -716,14 +716,29 @@ body {
   .grid-container--crew {
     justify-items: start;
     align-content: start;
-    /*   --flow-space: 2rem; */
     grid-template-areas:
-      ". title image ."
-      "tab . image ."
-      ". content image .";
+      ". title title ."
+      ". content image ."
+      ". tabs image .";
+  }
+
+  .grid-container--crew .crew-details p:nth-child(2) {
+    font-size: 3.2rem;
+  }
+
+  .grid-container--crew .crew-details p:nth-child(3) {
+    line-height: 2rem;
   }
 
   .grid-container--crew .douglas-img-container > img {
-    max-width: 90%;
+    max-width: 100%;
+  }
+
+  .grid-container--crew .dot-indicators {
+    justify-self: start;
+  }
+
+  .grid-container--crew > .douglas-img {
+    align-self: end;
   }
 }
