@@ -58,14 +58,14 @@
           <li class="active">
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
-              href="destination.html"
+              href="index.html"
               ><span aria-hidden="true">01</span>Destination</a
             >
           </li>
           <li>
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
-              href="crew.html"
+              href="crew-commander.html"
               ><span aria-hidden="true">02</span>Crew</a
             >
           </li>
@@ -85,7 +85,7 @@
         <span aria-hidden="true">01</span> Pick your destination
       </h1>
 
-      <picture>
+      <picture id="moon-image">
         <source
           srcset="Space-tourism-website/assets/destination/image-moon.webp"
           type="image/webp"
@@ -95,7 +95,7 @@
           alt="The Earth moon"
         />
       </picture>
-      <picture style="visibility: hidden;">
+      <picture style="visibility: hidden;" id="mars-image">
         <source
           srcset="Space-tourism-website/assets/destination/image-mars.webp"
           type="image/webp"
@@ -105,7 +105,7 @@
           alt="The planet Mars"
         />
       </picture>
-      <picture style="visibility: hidden;">
+      <picture style="visibility: hidden;" id="europa-image">
         <source
           srcset="Space-tourism-website/assets/destination/image-europa.webp"
           type="image/webp"
@@ -115,7 +115,7 @@
           alt="The planet Europa"
         />
       </picture>
-      <picture style="visibility: hidden;">
+      <picture style="visibility: hidden;" id="titan-image">
         <source
           srcset="Space-tourism-website/assets/destination/image-titan.webp"
           type="image/webp"
@@ -137,6 +137,7 @@
           aria-controls="moon-tab"
           class="uppercase ff-sans-cond text-accent letter-spacing-2 btn1"
           tabindex="0"
+          data-image="moon-image"
         >
           Moon
         </button>
@@ -146,6 +147,7 @@
           aria-controls="mars-tab"
           class="uppercase ff-sans-cond text-accent letter-spacing-2 btn2"
           tabindex="-1"
+          data-image="mars-image"
         >
           Mars
         </button>
@@ -155,6 +157,7 @@
           aria-controls="europa-tab"
           class="uppercase ff-sans-cond text-accent letter-spacing-2 btn3"
           tabindex="-1"
+          data-image="europa-image"
         >
           Europa
         </button>
@@ -164,13 +167,19 @@
           aria-controls="titan-tab"
           class="uppercase ff-sans-cond text-accent letter-spacing-2 btn4"
           tabindex="-1"
+          data-image="titan-image"
         >
           Titan
         </button>
       </div>
 
       <!-- The Moon -->
-      <article class="destination-info">
+      <article
+        class="destination-info flow"
+        id="moon-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <h2>
           <span class="d-block fs-800 ff-serif text-white uppercase">Moon</span>
         </h2>
@@ -207,7 +216,13 @@
       </article>
 
       <!-- Mars -->
-      <article class="destination-info" hidden>
+      <article
+        hidden
+        class="destination-info flow"
+        id="mars-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <h2>
           <span class="d-block fs-800 ff-serif text-white uppercase">Mars</span>
         </h2>
@@ -243,7 +258,13 @@
       </article>
 
       <!-- Europa -->
-      <article hidden class="destination-info">
+      <article
+        hidden
+        class="destination-info flow"
+        id="europa-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <h2>
           <span class="d-block fs-800 ff-serif text-white uppercase"
             >Europa</span
@@ -282,7 +303,13 @@
       </article>
 
       <!-- Titan -->
-      <article hidden class="destination-info">
+      <article
+        hidden
+        class="destination-info flow"
+        id="titan-tab"
+        tabindex="0"
+        role="tabpanel"
+      >
         <h2>
           <span class="d-block fs-800 ff-serif text-white uppercase"
             >Titan</span
@@ -293,10 +320,9 @@
           class="text-accent ff-sans-normal fs-300 middle-text"
           style="line-height: 1.8rem;"
         >
-          See our planet as you’ve never seen it before. A perfect relaxing trip
-          away to help regain perspective and come back refreshed. While you’re
-          there, take in some history by visiting the Luna 2 and Apollo 11
-          landing sites.
+          The only moon known to have a dense atmosphere other than Earth, Titan
+          is a home away from home (just a few hundred degrees colder!). As a
+          bonus, you get striking views of the Rings of Saturn.
         </p>
 
         <div class="flex destination-meta">
@@ -306,7 +332,7 @@
             >
               Avg. distance
             </h3>
-            <p class="uppercase ff-serif">384,400 km</p>
+            <p class="uppercase ff-serif">1.6 bil. km</p>
           </div>
 
           <div>
@@ -315,7 +341,7 @@
             >
               Est. travel time
             </h3>
-            <p class="uppercase ff-serif">3 days</p>
+            <p class="uppercase ff-serif">7 years</p>
           </div>
         </div>
       </article>

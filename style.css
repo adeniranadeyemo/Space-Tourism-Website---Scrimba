@@ -19,9 +19,9 @@
   --fs-200: 0.875rem;
 
   /* font-families */
-  --ff-serif: "Bellefair", serif;
-  --ff-sans-cond: "Barlow Condensed", sans-serif;
-  --ff-sans-normal: "Barlow", sans-serif;
+  --ff-serif: 'Bellefair', serif;
+  --ff-sans-cond: 'Barlow Condensed', sans-serif;
+  --ff-sans-normal: 'Barlow', sans-serif;
 }
 
 @media (min-width: 35em) {
@@ -320,7 +320,7 @@ margin-top: var(--flow-space, 1rem);
 }
 
 .underline-indicators > .active,
-.underline-indicators > [aria-selected="true"] {
+.underline-indicators > [aria-selected='true'] {
   color: hsl(var(--clr-white) / 1);
   border-color: hsl(var(--clr-white) / 1);
 }
@@ -342,7 +342,7 @@ margin-top: var(--flow-space, 1rem);
   background-color: hsl(var(--clr-white) / 0.5);
 }
 
-.dot-indicators > [aria-selected="true"] {
+.dot-indicators > [aria-selected='true'] {
   background-color: hsl(var(--clr-white) / 1);
 }
 
@@ -370,7 +370,7 @@ margin-top: var(--flow-space, 1rem);
 }
 
 .large-button::after {
-  content: "";
+  content: '';
   position: absolute;
   z-index: -1;
   width: 100%;
@@ -442,10 +442,10 @@ body {
 .grid-container--crew {
   --flow-space: 2rem;
   grid-template-areas:
-    "title"
-    "image"
-    "tabs"
-    "content";
+    'title'
+    'image'
+    'tabs'
+    'content';
 }
 
 .grid-container--destination > picture {
@@ -528,7 +528,7 @@ body {
     transform: translateX(100%);
   }
 
-  .primary-navigation[data-visible="true"] {
+  .primary-navigation[data-visible='true'] {
     transform: translateX(0%);
   }
 
@@ -552,7 +552,7 @@ body {
     transition: transform 1s ease-in-out;
   }
 
-  .mobile-nav-toggle[aria-expanded="true"] {
+  .mobile-nav-toggle[aria-expanded='true'] {
     background-image: url(Space-tourism-website/assets/svg/icon-close.svg);
   }
 
@@ -628,10 +628,10 @@ body {
   .grid-container--crew {
     --flow-space: 2rem;
     grid-template-areas:
-      "title"
-      "content"
-      "tabs"
-      "image";
+      'title'
+      'content'
+      'tabs'
+      'image';
     padding-bottom: 0;
   }
 
@@ -654,7 +654,7 @@ body {
   }
 
   .primary-header::after {
-    content: "";
+    content: '';
     display: block;
     position: relative;
     height: 1px;
@@ -703,9 +703,9 @@ body {
     justify-items: start;
     align-content: start;
     grid-template-areas:
-      ". title title ."
-      ". image tabs ."
-      ". image content .";
+      '. title title .'
+      '. image tabs .'
+      '. image content .';
   }
 
   .grid-container--destination > picture {
@@ -721,9 +721,9 @@ body {
     justify-items: start;
     align-content: start;
     grid-template-areas:
-      ". title title ."
-      ". content image ."
-      ". tabs image .";
+      '. title title .'
+      '. content image .'
+      '. tabs image .';
   }
 
   .grid-container--crew .crew-details p:nth-child(2) {
@@ -741,9 +741,4 @@ body {
   .grid-container--crew > .douglas-img {
     align-self: end;
   }
-}
-
-
-[role="tab"]:focus {
-  color: limegreen;
 }
