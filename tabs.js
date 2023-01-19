@@ -2,10 +2,12 @@ const tabList = document.querySelector('[role="tablist"]');
 const tabs = tabList.querySelectorAll('[role="tab"]');
 
 tabList.addEventListener('keydown', changeTabFocus);
+//
 tabs.forEach((tab) => {
   tab.addEventListener('click', changeTabPanel);
 });
 
+//
 let tabFocus = 0;
 function changeTabFocus(e) {
   const keydownLeft = 37;
@@ -16,7 +18,7 @@ function changeTabFocus(e) {
 
     if (e.keyCode === keydownRight) {
       tabFocus++;
-      if (tabFocus >= tabs.length) {
+      if (tabFocus === tabs.length) {
         tabFocus = 0;
       }
     } else if (e.keyCode === keydownLeft) {
