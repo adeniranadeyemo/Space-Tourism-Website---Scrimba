@@ -453,6 +453,10 @@ body {
     'content';
 }
 
+.grid-container--technology {
+  --flow-space: 1.5rem;
+}
+
 .grid-container--crew .numbered-title,
 .grid-container--technology .numbered-title {
   grid-area: title;
@@ -485,16 +489,18 @@ body {
 .grid-container--technology .tab-list > [aria-selected='false'] {
   color: hsl(var(--clr-white) / 1);
   background: none;
-  border: 1px solid hsl(var(--clr-light));
+  border: 1px solid hsl(var(--clr-light) / 0.3);
+  font-family: var(--ff-serif);
 }
 
 .grid-container--technology .tab-list > [aria-selected='false']:hover {
   background: hsl(var(--clr-white) / 0.05);
+  border: 1px solid hsl(var(--clr-light));
 }
 
 .grid-container--destination > .destination-info,
 .grid-container--crew > .crew-details,
-.grid-container--technology > .crew-details {
+.grid-container--technology > .tech-details {
   grid-area: content;
 }
 
@@ -541,6 +547,10 @@ body {
 
 .grid-container--crew .crew-details h2 {
   color: hsl(var(--clr-white) / 0.5);
+}
+
+.grid-container--technology > .tech-details > header p:nth-child(2) {
+  font-size: 2.3rem;
 }
 
 /* All Media Queries */
@@ -672,6 +682,21 @@ body {
   .grid-container--crew .crew-details > p {
     font-size: var(--fs-500);
   }
+
+  .grid-container--technology .dot-indicators {
+    margin-top: -5rem;
+  }
+
+  .grid-container--technology .dot-indicators > * {
+    width: 4rem;
+    padding: 0.6rem 0;
+    justify-content: center;
+    font-size: 1.7rem;
+  }
+
+  .grid-container--technology .tech-details {
+    margin-top: -4rem;
+  }
 }
 
 @media (min-width: 60em) {
@@ -685,6 +710,10 @@ body {
 
   .crew {
     background-image: url(Space-tourism-website/assets/crew/background-crew-desktop.jpg);
+  }
+
+  .technology {
+    background-image: url(Space-tourism-website/assets/technology/background-technology-desktop.jpg);
   }
 
   .primary-header::after {
@@ -782,5 +811,53 @@ body {
 
   .grid-container--crew .dot-indicators {
     justify-self: start;
+  }
+
+  .grid-container--technology {
+    grid-template-columns:
+      minmax(0.5rem, 0.5fr) minmax(0, 10rem) minmax(0, 32rem)
+      minmax(0, 18rem)
+      minmax(1rem, 1fr);
+    justify-items: start;
+    grid-template-areas:
+      '. title title title.'
+      '. tabs content image image'
+      '. tabs content image image';
+    position: relative;
+    padding-bottom: 15rem;
+  }
+
+  .grid-container--technology .numbered-title {
+    margin-bottom: 10rem;
+  }
+
+  .grid-container--technology .dot-indicators {
+    display: flex;
+    flex-direction: column;
+    align-self: start;
+  }
+
+  .grid-container--technology .dot-indicators > * {
+    width: 3.5rem;
+    padding: 0.6rem 0;
+    font-size: 1.5rem;
+  }
+
+  .grid-container--technology header h2 {
+    font-size: var(--fs-300);
+  }
+
+  .grid-container--technology .tech-details header p:nth-child(2) {
+    font-size: 3.2rem;
+  }
+
+  .grid-container--technology article p:nth-child(2) {
+    font-size: 1.1rem;
+  }
+
+  .grid-container--technology picture {
+    position: absolute;
+    right: -1rem;
+    top: -12.5rem;
   }
 }
